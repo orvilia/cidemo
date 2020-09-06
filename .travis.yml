@@ -10,7 +10,8 @@ before_script:
     - pip install docker-compose
     - pip install coveralls
 
-    
+script:
+    - docker-compose run app sh -c "pytest test.py --cov -p no:cacheprovider"
 
 after_succes:
     - coveralls
