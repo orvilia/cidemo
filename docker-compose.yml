@@ -1,0 +1,11 @@
+
+version: "3.8"
+
+services:
+    app:
+        build: .
+        command: sh -c "python main.py"
+        # Replace "YOUR_USER" for your Docker Hub user
+        image: saurabhdubeyaws/cidemo:latest
+        ports:
+            - "80:8000"
